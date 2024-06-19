@@ -1,0 +1,61 @@
+a=input()
+b=input()
+count=0
+for i in b:
+    if i in a:
+        count=count+1
+print(count)
+
+
+
+s=input()
+flag=0
+for i in s:
+    if i=="0" or i=="1":
+        continue
+    else:
+        flag=1
+        break
+if flag==0:
+    print("Yes")
+else:
+    print("No")
+
+
+
+
+a=input()
+b=[]
+for i in a:
+    if i not in b:
+        b.append(i)
+    else:
+        print(i)
+
+
+
+n=int(input())
+b=[]
+for i in range(n):
+    a=input()
+    b.append(a)
+row1=set("q,w,e,r,t,y,u,i,o,p")
+row2=set("a,s,d,f,g,h,j,k,l")
+row3=set("z,x,c,v,b,n,m")
+flag=0
+for i in b:
+    it=set(i.lower())
+    if it<=row1 or it<=row2 or it<=row3:
+        print(i)
+        flag=1
+if flag==0:
+    print("No words")
+
+
+
+
+
+
+
+
+
