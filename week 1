@@ -1,0 +1,41 @@
+a=int(input())
+b=float(input())
+print(a,type(a),sep=',')
+print(round(b,1),type(b),sep=',')
+
+
+a=int(input())
+b=a*0.4
+c=a*0.2
+d=a+b+c
+print(d)
+
+
+a=float(input())
+b=a**0.5
+print(round(b,3))
+
+
+x=int(input())
+y=int(input())
+z=int(input())
+a=x+y
+b=z-a
+c=b*100/a
+print("%.2f is the gain percent."%c)
+
+
+
+a=int(input())
+b=int(input())
+c=(a*0.10)+(b*0.25)
+print("Your total refund will be $%.2f."%c)
+
+
+
+
+a=int(input())
+we=abs((a-500)/130)
+wd=we+10
+print('weekdays %.2f'%wd)
+print('weekend %.2f'%we)
