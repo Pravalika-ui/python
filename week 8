@@ -1,0 +1,77 @@
+n=int(input().strip())
+vote_count={}
+for _ in range(n):
+    candidate=input().strip()
+    if candidate in vote_count:
+        vote_count[candidate]+=1
+    else:
+        vote_count[candidate]=1
+max_votes=0
+winner=" "
+for candidate,votes in vote_count.items():
+    if votes>max_votes or(votes==max_votes and candidate<winner):
+        max_votes=votes
+        winner=candidate
+print(winner)
+
+
+
+
+scrabble_points={'A':1,'E':1,'I':1,'L':1,'N':1,'O':1,'R':1,'S':1,'T':1,'U':1,'D':2,'G':2,'B':3,'C':3,'M':3,'P':3,'F':4,'H':4,'V':4,'W':4,'Y':4,'K':5,'J':5,'J':5,'X':8,'Q':10,'Z':10}
+word=input().strip().upper()
+score=0
+for letter in word:
+    score+=scrabble_points.get(letter,0)
+print(f"{word} is worth {score} points.")
+
+
+
+
+a=input().strip()
+b=input().strip()
+a=a.split()
+b=b.split()
+x=[]
+for i in a:
+    if i not in b:
+        if i not in x:
+            x.append(i)
+for i in b:
+    if i not in a:
+        if i not in x:
+            x.append(i)
+for i in x:
+    print(i,end=" ")
+
+
+
+
+
+n=int(input())
+test_dict={}
+for _ in range(n):
+    key,*values=input().split()
+    test_dict[key]=list(map(int,values))
+sorted_dict={key:sum(values)for key,values in sorted(test_dict.items(),key=lambda item:sum(item[1]))}
+for key,value in sorted_dict.items():
+    print(key,value)
+
+
+
+
+def average(scores):
+    return sum(scores)/len(scores)
+n=int(input())
+students={}
+for i in range(n):
+    name,test,assignment,lab=input().split()
+    students[name]=[int(test),int(assignment),int(lab)]
+averages={name:average(scores)for name,scores in students.items()}
+highest_avg=max(averages.values())
+highest_avg_students=[name for name,avg in averages.items() if avg==highest_avg]
+highest_assignment=max(student[1]for student in students.values())
+highest_assignment_students=[name for name,scores in students.items() if scores[1]==highest_assignment]
+lowest_lab=min(student[2]for student in students.values())
+lowest_lab_students=[name for name,scores in students.items()if scores[2]==lowest_lab]
+lowest_avg=min(averages.values())
+lowest_avg_students=[name for names,avg in students.items()if avg==lowest_avg]
