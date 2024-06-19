@@ -1,0 +1,102 @@
+a=int(input())
+print(a%2==0)
+
+
+
+a=int(input())
+tax=a*0.05
+tip=a*0.18
+total=tax+tip+a
+print('The tax is %.2f and'%tax,end=" ")
+print ('the tip is %.2f,'%tip,end=" ")
+print('making the total %.2f'%total)
+
+a=int(input())
+b=int(input())
+print(a%3==0 and b%2==0)
+
+
+n=int(input())
+d1=n&1
+n=n>>1
+d2=(n&1)
+n=n>>1
+d3=(n&1)
+n=n>>1
+d4=(n&1)
+print(d1+d2+d3+d4)
+
+
+
+n=int(input())
+p1=int(input())
+p2=int(input())
+p3=int(input())
+p4=int(input())
+if p1%n==0:
+    print('True',end=" ")
+else:
+    print('False',end=" ")
+if p2%n==0:
+    print('True',end=" ")
+else:
+    print('False',end=" ")
+if p3%n==0:
+    print('True',end=" ")
+else: 
+    print('False',end=" ")
+if p4%n==0:
+    print('True',end=" ")
+else:
+    print('False',end=" ")
+
+
+
+
+
+a=int(input())
+w=int(input())
+print(a>=18 and w>40)
+
+
+
+
+a=int(input())
+abs_a=abs(a)
+b=abs_a%10
+print(b)
+
+
+
+
+
+a=int(input())
+if not a==0:
+    print('D')
+else:
+   print('C')
+
+
+
+
+s=int(input())
+a=s*0.04
+total=a+s
+print('Balance as of end of Year 1: $%.2f.'%total)
+b=total*0.04
+total1=b+total 
+print('Balance as of end of Year 2: $%.2f.'%total1)
+c=total1*0.04
+total2=c+total1
+print('Balance as of end of Year 3: $%.2f.'%total2)
+
+
+
+
+
+a=int(input())
+b=int(input())
+c=a*75
+d=b*112
+e=c+d
+print("The total weight of all these widgets and gizmos is %s grams."%e)
