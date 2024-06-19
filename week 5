@@ -1,0 +1,141 @@
+s=input()
+a=s.split('@')
+b=a[1].partition('.')
+c=list(b)
+print(b[-1])
+print(b[0])
+print(a[0])
+
+
+
+str1=input()
+n=list(str1)
+s=""
+i=0
+while i<len(str1):
+    ch=str1[i]
+    c=''
+    i+=1
+    while i<len(str1) and str1[i].isdigit():
+        c+=str1[i]
+        i+=1
+    c=int(c)
+    s=s+ch*c
+print(s)    
+
+
+
+
+
+s=input()
+s=s.lower()
+l=s.split()
+for i in l:
+    if(i!=i[::-1]):
+        print(i,end=" ")
+
+
+
+
+s=input()
+a=s.split()
+if (len(a)==1):
+    print("LESS")
+else:
+    print(a[1].upper())
+
+
+
+
+s=input()
+a=0
+b=0
+c=0
+for i in s:
+    if i.isalpha():
+        a=a+1
+    elif i.isdigit():
+        b=b+1
+    else:
+        c=c+1
+print(a)
+print(b)
+print(c)
+
+
+
+
+s1=input()
+s2=input()
+x=""
+for a in s1:
+    if a not in s2:
+        x=x+a
+print(x)        
+
+
+
+
+
+s1=input()
+s2=input()
+a=set(s1)
+b=set(s2)
+if a.issubset(b):
+    print("True")
+else:
+    print("False")
+
+
+
+
+
+n=input()
+a=" "
+for i in n:
+    if i.isalpha():
+        a=a+i
+a=a[::-1]
+k=0
+for i in n:
+    if i.isalpha():
+        print(a[k],end="")
+        k=k+1
+    else:
+        print(i,end="")
+
+
+
+
+
+
+s=set()
+l=[]
+while True:
+    try:
+        n=input().strip()
+        if not n:n=set(list(input()))
+m=set(list(input()))
+a=int(input())
+l=[]
+for i in n:
+    for j in m:
+        if(i==j):
+            l.append(i)
+s=sorted(set(l))
+l2=list(s)
+for i in range(0,a):
+    print(l2[i],end="")
+            break
+        if n not in s:
+            s.add(n)
+            l.append(n)
+    except EOFError:
+            break
+for i in l:
+    print(i)
+
+
+
+
+
